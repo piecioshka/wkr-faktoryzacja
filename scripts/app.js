@@ -51,21 +51,21 @@
         // Returns `true` if error list is empty. Otherwise return 'false'
         _checkParams: function () {
             var s = this.settings;
-            var a = parseInt(s.first.val(), 10);
-            var b = parseInt(s.second.val(), 10);
+            var a = s.first.val();
+            var b = s.second.val();
 
             var errors = [];
             var status;
 
-            if (!_.isNumber(a) || _.isNaN(a)) {
+            if (!(/^\d+$/).test(a)) {
                 errors.push('Incorrect value of "first" param');
             }
 
-            if (!_.isNumber(b) || _.isNaN(b)) {
+            if (!(/^\d+$/).test(b)) {
                 errors.push('Incorrect value of "second" param');
             }
 
-            if (b === 1 || b === 0) {
+            if (b == 1 || b == 0) {
                 errors.push('Incorrect value of "second" param');
             }
 
