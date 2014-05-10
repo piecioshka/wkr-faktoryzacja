@@ -48,17 +48,35 @@
             e.preventDefault();
         },
 
+        // Returns `true` if error list is empty. Otherwise return 'false'
         _checkParams: function () {
             var s = this.settings;
-            var a = s.first.val();
-            var b = s.second.val();
+            var a = parseInt(s.first.val(), 10);
+            var b = parseInt(s.second.val(), 10);
 
-            if (!a.length || !b.length) {
-                alert('Please fill mandatory params');
-                return false;
+            var errors = [];
+            var status;
+
+            if (!_.isNumber(a)) {
+                errors.push('Incorrect value of "first" param');
             }
 
-            return true;
+            if (!_.isNumber(b)) {
+                errors.push('Incorrect value of "second" param');
+            }
+
+            if (b === 1 || b === 0) {
+                errors.push('Incorrect value of "second" param');
+            }
+
+            if (_.size(errors)) {
+                alert(_.first(errors));
+            }
+
+            // update status by error list
+            status = !_.size(errors);
+
+            return status;
         },
 
         _calculate: function () {
