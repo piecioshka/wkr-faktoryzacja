@@ -1,4 +1,4 @@
-# Faktoryzacja - algorytm szybkiego potęgowania modularnego
+# Wstęp do kryptologii - faktoryzacja
 
 Mini aplikacja pozwalająca rozłożyć liczbę na czynniki.
 
