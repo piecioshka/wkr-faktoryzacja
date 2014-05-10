@@ -57,11 +57,11 @@
             var errors = [];
             var status;
 
-            if (!_.isNumber(a)) {
+            if (!_.isNumber(a) || _.isNaN(a)) {
                 errors.push('Incorrect value of "first" param');
             }
 
-            if (!_.isNumber(b)) {
+            if (!_.isNumber(b) || _.isNaN(b)) {
                 errors.push('Incorrect value of "second" param');
             }
 
