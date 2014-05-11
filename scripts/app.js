@@ -58,15 +58,11 @@
             var status;
 
             if (!(/^\d+$/).test(a)) {
-                errors.push('Incorrect value of "first" param');
+                errors.push('Niepoprawna wartość pierwszego parametru');
             }
 
-            if (!(/^\d+$/).test(b)) {
-                errors.push('Incorrect value of "second" param');
-            }
-
-            if (b == 1 || b == 0) {
-                errors.push('Incorrect value of "second" param');
+            if (!(/^\d+$/).test(b) || b == 1 || b == 0) {
+                errors.push('Niepoprawna wartość drugiego parametru');
             }
 
             if (_.size(errors)) {
