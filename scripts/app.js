@@ -1,6 +1,6 @@
 /**
  * @author Piotr Kowalski <piecioshka@gmail.com>
- * @see http://piecioshka.pl/projects/wkr-faktoryzacja/
+ * @see https://piecioshka.github.io/wkr-faktoryzacja/
  * @licence The MIT License {@link http://piecioshka.mit-license.org/}
  */
 (function (root, factory) {
