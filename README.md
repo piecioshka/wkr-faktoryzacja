@@ -2,7 +2,7 @@
 
 Mini aplikacja pozwalająca rozłożyć liczbę na czynniki.
 
-## Demo 🎉
+## Preview 🎉
 
 <https://piecioshka.github.io/wkr-faktoryzacja/>
 
